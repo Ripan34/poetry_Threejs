@@ -3,7 +3,6 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {TextGeometry} from 'three/examples/jsm/geometries/TextGeometry.js';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-import typefaceFont from 'three/examples/fonts/helvetiker_regular.typeface.json';
 
 //size
 const sizes = {
@@ -11,7 +10,7 @@ const sizes = {
   height: window.innerHeight
 }
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('/pr.png');
+const texture = textureLoader.load('./pr.png');
 
 const scene = new THREE.Scene();
 
@@ -25,7 +24,7 @@ for(let i = 0; i < 5; i++){
 
 const fontLoader = new FontLoader();
 fontLoader.load(
-  '/fonts/myFont.json',
+  './fonts/myFont.json',
   (font) => {
     const textGeo = new TextGeometry('hello/n hii', {
       font: font,
