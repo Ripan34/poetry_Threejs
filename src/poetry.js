@@ -59,6 +59,7 @@ renderer.render(scene, camera);
 
 const tick = () => {
   //update controls
+  
   controls.update();
   // cube.rotation.z += 0.01
   // cube.rotation.y += 0.01
